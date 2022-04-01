@@ -1,10 +1,10 @@
 import SingUpProps from "./interface";
-import { Container, Text } from './styles'
+import { Container } from './styles'
 
 export default function SingUp(props: SingUpProps) {
     return (
       <Container>
-        <Text>Cadastro</Text>
+        <h1>Cadastro</h1>
       </Container>
     );
   }

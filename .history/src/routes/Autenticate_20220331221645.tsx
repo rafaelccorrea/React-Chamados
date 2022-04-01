@@ -29,7 +29,7 @@ export function RouteWrapper() {
     return(
         <Routes>
             <Route path="/" element={ <Signin /> } />
-            <Route path="/signup" element={ <SingUp /> } />
+            <Route path="/" element={ <SingUp /> } />
         </Routes>
     )
 }

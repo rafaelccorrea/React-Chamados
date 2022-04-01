@@ -1,10 +1,10 @@
 import SignInProps from './interface';
-import { Container, Text } from './styles'
+import { Container } from './styles'
 
 export default function Signin(props: SignInProps) {
     return (
       <Container>
-        <Text>Login</Text>
+        <h1>Login</h1>
       </Container>
     );
   }

@@ -1,5 +1,5 @@
 import SignInProps from './interface';
-import { Container, Text } from './styles'
+import { Container } from './styles'
 
 export default function Signin(props: SignInProps) {
     return (

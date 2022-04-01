@@ -6,7 +6,3 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
 `
-
-export const Text = styled.h1`
-    font-weight: bold;
-`
