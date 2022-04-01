@@ -17,7 +17,7 @@ export default function Signin(props: SignInProps) {
           <TextField
             label="Senha"
             required
-            type="password"
+            type="text"
             placeholder="*********"
             size="small"
             variant='outlined'

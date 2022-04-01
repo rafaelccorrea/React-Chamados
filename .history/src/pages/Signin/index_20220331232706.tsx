@@ -12,15 +12,7 @@ export default function Signin(props: SignInProps) {
             type="text"
             placeholder="lets@email.com.br"
             size="small"
-            variant='outlined'
-          />
-          <TextField
-            label="Senha"
-            required
-            type="password"
-            placeholder="*********"
-            size="small"
-            variant='outlined'
+            variant='standard'
           />
         </Box>
       </Container>

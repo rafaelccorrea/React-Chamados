@@ -15,8 +15,8 @@ export const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140vh;
-  height: 72vh;
+  width: 100vh;
+  height: 628px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;

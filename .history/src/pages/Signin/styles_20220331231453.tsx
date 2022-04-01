@@ -12,12 +12,6 @@ export const Text = styled.h1`
 `;
 
 export const Box = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 140vh;
-  height: 72vh;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-`
+    background-color: '#cfe8fc',
+    height: 80vh;
+`;

@@ -6,21 +6,11 @@ export default function Signin(props: SignInProps) {
     return (
       <Container>
         <Box>
+          <Text>Login</Text>
           <TextField
-            label="Email"
             required
             type="text"
-            placeholder="lets@email.com.br"
-            size="small"
-            variant='outlined'
-          />
-          <TextField
-            label="Senha"
-            required
-            type="password"
-            placeholder="*********"
-            size="small"
-            variant='outlined'
+            placeholder="Login"
           />
         </Box>
       </Container>

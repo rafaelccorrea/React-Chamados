@@ -14,14 +14,6 @@ export default function Signin(props: SignInProps) {
             size="small"
             variant='outlined'
           />
-          <TextField
-            label="Senha"
-            required
-            type="password"
-            placeholder="*********"
-            size="small"
-            variant='outlined'
-          />
         </Box>
       </Container>
     );
