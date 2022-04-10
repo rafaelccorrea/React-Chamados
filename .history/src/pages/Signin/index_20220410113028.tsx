@@ -2,7 +2,7 @@ import SignInProps from './interface';
 import { Container, Text, Box } from './styles'
 import { TextField } from '@material-ui/core';
 
-export function SignIn(props: SignInProps) {
+export function Signin(props: SignInProps) {
     return (
       <Container>
         <Box>

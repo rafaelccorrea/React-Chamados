@@ -14,8 +14,8 @@ export default function Rotas(){
             <Route path="/signup" element={<RouteWrapper isPrivate={false}/>}>
                 <Route path="/signup" element={<SingUp/>}/>
             </Route>            
-            <Route path="/dashboard" element={<RouteWrapper isPrivate/>}>
-                <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route exact path="/dashboard" element={<RouteWrapper isPrivate/>}>
+                <Route exact path="/dashboard" element={<Dashboard/>}/>
             </Route> 
         </Routes>
     )

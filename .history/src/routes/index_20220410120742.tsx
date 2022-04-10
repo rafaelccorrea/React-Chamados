@@ -8,7 +8,7 @@ import {
 export default function Rotas(){
     return(
         <Routes>
-            <Route path="/" element={<RouteWrapper isPrivate={false}/>}>
+            <Route path="/" element={<RouteWrapper ...rest isPrivate={false}/>}>
                 <Route path="/" element={<SignIn/>}/>
             </Route>
             <Route path="/signup" element={<RouteWrapper isPrivate={false}/>}>

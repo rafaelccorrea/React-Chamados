@@ -1,9 +1,9 @@
-import Rotas from "./routes";
+import { rotas } from "./routes";
 
 function AppStored() {
   return (
     <>
-      <Rotas />
+      <Router />
     </>
   );
 }
