@@ -1,9 +1,9 @@
 import { SignIn } from './Signin'
-import { SingUp } from './SignUp'
+import { SignUp } from './SignUp'
 import { Dashboard } from './Dashboard'
 
 export {
     SignIn,
-    SingUp,
+    SignUp,
     Dashboard
 }

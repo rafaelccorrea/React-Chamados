@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import RouteWrapper from "./Routes";
-import { SignIn, SingUp, Dashboard } from "../pages";
+import { SignIn, SignUp, Dashboard } from "../pages";
 export default function Rotas() {
   return (
     <BrowserRouter>
@@ -9,7 +9,7 @@ export default function Rotas() {
           <Route path="/" element={<SignIn />} />
         </Route>
         <Route path="/signup" element={<RouteWrapper isPrivate={false} />}>
-          <Route path="/signup" element={<SingUp />} />
+          <Route path="/signup" element={<SignUp />} />
         </Route>
         <Route path="/dashboard" element={<RouteWrapper isPrivate />}>
           <Route path="/dashboard" element={<Dashboard />} />
