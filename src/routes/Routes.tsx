@@ -5,7 +5,7 @@ export default function RouteWrapper({ isPrivate }: RoutesProps) {
   const signed = false;
 
   if (!signed && isPrivate) {
-    return <Navigate to="/" />;
+    return <Navigate to="/signin" />;
   }
 
   if (signed && !isPrivate) {

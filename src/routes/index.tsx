@@ -5,8 +5,8 @@ export default function Rotas() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RouteWrapper isPrivate={false} />}>
-          <Route path="/" element={<SignIn />} />
+        <Route path="/signin" element={<RouteWrapper isPrivate={false} />}>
+          <Route path="/signin" element={<SignIn />} />
         </Route>
         <Route path="/signup" element={<RouteWrapper isPrivate={false} />}>
           <Route path="/signup" element={<SignUp />} />

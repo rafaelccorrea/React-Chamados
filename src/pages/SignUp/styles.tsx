@@ -10,3 +10,10 @@ export const Container = styled.div`
 export const Text = styled.h1`
     font-weight: bold;
 `
+
+export const BoxContainer = {
+    marginTop: 8,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+}
