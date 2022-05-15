@@ -1,6 +1,12 @@
 import { styled, Theme, CSSObject } from "@mui/material/styles";
 import { MuiAppBar, MuiDrawer } from "../../materialUI"
 import AppBarProps from './interface'
+import style from 'styled-components'
+
+export const Img = style.img`
+  margin-left: 1.5em;
+  width: 75px;
+`
 
 const drawerWidth = 260;
 

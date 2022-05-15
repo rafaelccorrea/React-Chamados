@@ -20,7 +20,7 @@ import {
   Typography
 } from "../../materialUI";
 
-import { DrawerHeader, Drawer, AppBar, LinkStyles, TextLink } from "./styles";
+import { DrawerHeader, Drawer, AppBar, LinkStyles, TextLink, Img } from "./styles";
 
 import DrawerProps from './interface'
 
@@ -54,6 +54,7 @@ export default function MiniDrawer(props: DrawerProps) {
             }}
           >
             <MenuIcon />
+            <Img src='../../assets/logo.png' alt="logo"/>
           </IconButton>
           <Typography variant="h6" noWrap component="div" sx={{ color: 'white', marginRight: '2.5em' }}>
             {props.name}

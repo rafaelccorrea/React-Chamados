@@ -2,12 +2,9 @@ import {
   MiniDrawer
 } from '../../components'
 
-// import Logo from '~/assets/logo.svg'
-
 import HeaderProps from './interface'
 import {
-  Container,
-  Img
+  Container
 } from './styles'
 
 export default function defaultHeader (props: HeaderProps) {
@@ -16,7 +13,6 @@ export default function defaultHeader (props: HeaderProps) {
         <MiniDrawer name="Rafael">
           { props.children }
         </MiniDrawer>
-        {/* <Img src={ Logo } alt="Logo"/> */}
       </Container>
   )
 }
