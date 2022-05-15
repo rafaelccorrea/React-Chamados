@@ -41,21 +41,21 @@ export default function MiniDrawer(props: DrawerProps) {
       <CssBaseline />
       <AppBar position="fixed" open={open} sx={{ display: "flex" }}>
         <Toolbar
-          sx={{ backgroundColor: "#FFF", justifyContent: "space-between" }}
+          sx={{ backgroundColor: "green", justifyContent: "space-between" }}
         >
           <IconButton
-            color="info"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
             sx={{
               marginRight: 5,
               ...(open && { display: "none" }),
+              color: "white"
             }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" color="primary">
+          <Typography variant="h6" noWrap component="div" sx={{ color: 'white', marginRight: '2.5em' }}>
             {props.name}
           </Typography>
         </Toolbar>
