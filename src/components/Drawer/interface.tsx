@@ -1,5 +1,10 @@
-import { MuiAppBarProps } from '../../materialUI'
+import { MuiAppBarProps } from "../../materialUI";
 
 export default interface AppBarProps extends MuiAppBarProps {
-    open?: boolean;
-  }
+  open?: boolean;
+}
+
+export default interface DrawerProps {
+  name?: string;
+  children: any;
+}

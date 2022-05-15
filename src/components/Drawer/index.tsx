@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { useTheme} from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
+import { Link as RouterLink } from "react-router-dom";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   Divider,
   IconButton,
-  InboxIcon,
   List,
   ListItemButton,
-  ListItem,
   ListItemText,
   MenuIcon,
   MailIcon,
@@ -16,12 +15,16 @@ import {
   Toolbar,
   Box,
   CssBaseline,
+  Link,
+  Logout,
+  Typography
 } from "../../materialUI";
-import { Menu } from "../../components";
 
-import { DrawerHeader, Drawer, AppBar } from './styles'
+import { DrawerHeader, Drawer, AppBar, LinkStyles, TextLink } from "./styles";
 
-export default function MiniDrawer() {
+import DrawerProps from './interface'
+
+export default function MiniDrawer(props: DrawerProps) {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -37,7 +40,9 @@ export default function MiniDrawer() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open} sx={{ display: "flex" }}>
-        <Toolbar sx={{backgroundColor: "#FFF",  justifyContent: "space-between"}}>
+        <Toolbar
+          sx={{ backgroundColor: "#FFF", justifyContent: "space-between" }}
+        >
           <IconButton
             color="info"
             aria-label="open drawer"
@@ -50,7 +55,9 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-            <Menu />
+          <Typography variant="h6" noWrap component="div" color="primary">
+            {props.name}
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -64,31 +71,47 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider />
+        <List sx={{ color: "white" }}>
+          <ListItemButton>
+            <ListItemIcon>
+              <Link style={LinkStyles} component={RouterLink} to="/home">
+                <MailIcon sx={{ color: 'white' }} />
+                <ListItemText style={TextLink} primary="Dashboard" />
+              </Link>
+            </ListItemIcon>
+          </ListItemButton>
+          <ListItemButton>
+            <ListItemIcon>
+              <Link style={LinkStyles} component={RouterLink} to="/home">
+                <MailIcon sx={{ color: 'white' }} />
+                <ListItemText style={TextLink} primary="Dashboard" />
+              </Link>
+            </ListItemIcon>
+          </ListItemButton>
+          <ListItemButton>
+            <ListItemIcon>
+              <Link style={LinkStyles} component={RouterLink} to="/home">
+                <MailIcon sx={{ color: 'white' }} />
+                <ListItemText style={TextLink} primary="Dashboard" />
+              </Link>
+            </ListItemIcon>
+          </ListItemButton>
+        </List>
+        <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItemButton>
+            <ListItemIcon>
+              <Link style={LinkStyles} component={RouterLink} to="/home">
+                <Logout sx={{ color: 'white' }} />
+                <ListItemText style={TextLink} primary="Logout" />
+              </Link>
+            </ListItemIcon>
+          </ListItemButton>
         </List>
       </Drawer>
+      <Box component="main">
+        {props.children}
+      </Box>
     </Box>
   );
 }

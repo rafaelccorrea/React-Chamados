@@ -2,7 +2,7 @@ import { styled, Theme, CSSObject } from "@mui/material/styles";
 import { MuiAppBar, MuiDrawer } from "../../materialUI"
 import AppBarProps from './interface'
 
-const drawerWidth = 240;
+const drawerWidth = 260;
 
 const openedMixin = (theme: Theme): CSSObject => ({
     width: drawerWidth,
@@ -60,6 +60,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
     flexShrink: 0,
     whiteSpace: "nowrap",
     boxSizing: "border-box",
+    marginLeft: "-80px",
     ...(open && {
       ...openedMixin(theme),
       "& .MuiDrawer-paper": openedMixin(theme),
@@ -69,3 +70,15 @@ const closedMixin = (theme: Theme): CSSObject => ({
       "& .MuiDrawer-paper": closedMixin(theme),
     }),
   }));
+
+  export const LinkStyles = {
+    textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center'
+  }
+  
+  export const TextLink = {
+    marginLeft: '30px',
+    color: 'white'
+  }
+  

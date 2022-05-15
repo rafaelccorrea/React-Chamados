@@ -1,4 +1,5 @@
 import MiniDrawer from './Drawer'
-import Menu from './Menu'
+import Teste from './Teste'
+import Header from './Header'
 
-export { MiniDrawer, Menu }
+export { MiniDrawer, Teste, Header }
