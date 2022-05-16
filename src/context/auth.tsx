@@ -3,10 +3,9 @@ import { useState, createContext, useEffect } from 'react';
 
 export const AuthContext = createContext({});
 function AuthProvider({ children }: AuthContextProps) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({ id: 1, name: 'Rafael'});
   const [loadingAuth, setLoadingAuth] = useState(false);
   const [loading, setLoading] = useState(true);
-
 
   useEffect(() => {
     function loadingAuth() {
@@ -24,7 +23,7 @@ function AuthProvider({ children }: AuthContextProps) {
   return (
     <AuthContext.Provider
       value={{
-        //Valor de usuario quem vem em object convertido pra bollean com !!
+        // authenticated: Valor de usuario quem vem em object convertido pra bollean com !!
         authenticated: !!user,
         user,
         loading
