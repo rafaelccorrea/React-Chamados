@@ -12,23 +12,22 @@ export default function Rotas() {
     <BrowserRouter>
       <Routes>
         <>
-        { authenticated ? (
+          {authenticated ? (
             <>
-            <Route path="/" element={<AuthenticatedLayout />}>
-              <Route index element={<Navigate to="/home" replace />} />
-              <Route path="/home" element={<HomePage />} />
-            </Route>
-            <Route path="*" element={<Navigate to="/home" replace />} />
-          </>
-        ) : (
-          <>
-            <Route path="/auth" element={<SignIn />}>
-              <Route index element={<Navigate to="/auth" replace />} />
+              <Route path="/" element={<AuthenticatedLayout />}>
+                <Route index element={<Navigate to="/home" replace />} />
+                <Route path="/home" element={<HomePage />} />
+              </Route>
+              <Route path="*" element={<Navigate to="/home" replace />} />
+            </>
+          ) : (
+            <>
+              <Route path="/auth/signin" element={<SignIn />} />
+              <Route index element={<Navigate to="/auth/signin" replace />} />
               <Route path="/auth/signup" element={<SignUp />} />
-            </Route>
-            <Route path="*" element={<Navigate to="/auth" replace />} />
-          </>
-        )}
+              <Route path="*" element={<Navigate to="/auth/signin" replace />} />
+            </>
+          )}
         </>
       </Routes>
     </BrowserRouter>

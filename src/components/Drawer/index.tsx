@@ -41,7 +41,7 @@ export default function MiniDrawer(props: DrawerProps) {
       <CssBaseline />
       <AppBar position="fixed" open={open} sx={{ display: "flex" }}>
         <Toolbar
-          sx={{ backgroundColor: "white", justifyContent: "space-between" }}
+          sx={{ backgroundColor: "green", justifyContent: "space-between" }}
         >
           <IconButton
             aria-label="open drawer"
@@ -50,16 +50,13 @@ export default function MiniDrawer(props: DrawerProps) {
             sx={{
               marginRight: 5,
               ...(open && { display: "none" }),
-              color: "green"
+              color: "white"
             }}
           >
             <MenuIcon />
-          </IconButton>
-          <Box>
-
             <Img src='../../assets/logo.png' alt="logo"/>
-          </Box>
-          <Typography variant="h6" noWrap component="div" sx={{ color: 'gray', marginRight: '2.5em' }}>
+          </IconButton>
+          <Typography variant="h6" noWrap component="div" sx={{ color: 'white', marginRight: '2.5em' }}>
             {props.name}
           </Typography>
         </Toolbar>
