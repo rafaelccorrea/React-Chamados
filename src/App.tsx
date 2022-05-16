@@ -1,4 +1,5 @@
 import Rotas from "./routes";
+import AuthProvider from "./context/auth"
 
 function AppStored() {
   return (
@@ -11,7 +12,9 @@ function AppStored() {
 export function App() {
   return (
     <>
+    <AuthProvider> 
       <AppStored />
+    </AuthProvider>
     </>
   );
 }
