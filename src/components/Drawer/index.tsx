@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import { Link as RouterLink } from "react-router-dom";
 import {
@@ -22,11 +22,15 @@ import {
 
 import { DrawerHeader, Drawer, AppBar, LinkStyles, TextLink, Img } from "./styles";
 
+import { AuthContext } from "../../context/auth"
+
 import DrawerProps from './interface'
 
 export default function MiniDrawer(props: DrawerProps) {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+
+  const { logout }:any = useContext(AuthContext);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -101,11 +105,9 @@ export default function MiniDrawer(props: DrawerProps) {
         <Divider />
         <List>
           <ListItemButton>
-            <ListItemIcon>
-              <Link style={LinkStyles} component={RouterLink} to="/home">
+            <ListItemIcon onClick={logout}>
                 <Logout sx={{ color: 'white' }} />
                 <ListItemText style={TextLink} primary="Logout" />
-              </Link>
             </ListItemIcon>
           </ListItemButton>
         </List>

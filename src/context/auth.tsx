@@ -4,7 +4,7 @@ import firebase from "../firebase/firebase";
 
 export const AuthContext = createContext({});
 function AuthProvider({ children }: AuthContextProps) {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -65,6 +65,12 @@ function AuthProvider({ children }: AuthContextProps) {
     localStorage.setItem("userAuth", JSON.stringify(data));
   }
 
+  async function logout() {
+    await firebase.auth().signOut();
+    localStorage.removeItem("userAuth");
+    setUser(null);
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -72,7 +78,8 @@ function AuthProvider({ children }: AuthContextProps) {
         authenticated: !!user,
         user,
         loading,
-        signUp
+        signUp,
+        logout
       }}
     >
       {children}
