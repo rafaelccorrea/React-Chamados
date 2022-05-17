@@ -1,13 +1,10 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useContext } from "react";
 import {
   Avatar,
   Button,
   CssBaseline,
   TextField,
-  FormControlLabel,
-  Checkbox,
   Link,
-  Paper,
   Box,
   Grid,
   LockOutlinedIcon,
@@ -15,6 +12,8 @@ import {
   Container,
 } from "../../materialUI";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import { AuthContext } from "../../context/auth";
 
 import { BoxContainer } from "./styles";
 
@@ -42,18 +41,19 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export function SignUp() {
+  const { signUp }:any = useContext(AuthContext);
+  
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    if (name !== "" && lastName !== "" && email !== "" && password !== "") {
+      signUp(name, lastName, email, password);
+    }
   };
 
   return (
