@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useContext } from "react";
 import {
   Avatar,
   Button,
@@ -15,6 +15,7 @@ import {
 } from "../../materialUI";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { BoxGrid, BoxContainer } from './styles'
+import { AuthContext } from "../../context/auth"
 
 function Copyright(props: any) {
   return (
@@ -37,11 +38,13 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export function SignIn() {
+  const { signIn }: any= useContext(AuthContext)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    signIn(email, password)
   };
 
   return (
