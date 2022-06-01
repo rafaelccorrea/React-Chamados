@@ -110,7 +110,7 @@ export function SideMenu ({ children }: {children: ReactNode}) {
         </ListItemButton>
         <ListItemButton>
           <ListItemIcon>
-          <Link style={ LinkStyles } component={ RouterLink } onClick={ handleDrawerClose } to="/customers">
+          <Link style={ LinkStyles } component={ RouterLink } onClick={ handleDrawerClose } to="/clients">
             <GroupIcon style={ IconStyle } color="action" />
           <ListItemText style={ TextLink } primary="Clientes" />
           </Link>
