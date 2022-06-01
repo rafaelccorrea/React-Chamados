@@ -10,7 +10,7 @@ import {
   LockOutlinedIcon,
   Typography,
   Container,
-} from "../../materialUI";
+} from "../../MaterialUI";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { AuthContext } from "../../context/auth";

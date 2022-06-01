@@ -1,14 +1,20 @@
 import { Outlet } from "react-router-dom";
 
-import { Header } from "../../components";
+import { Header, MiniDrawer } from "../../components";
 
 import { Layout } from "./styles";
+import { AuthContext } from '../../context/auth'
+import { useContext } from 'react';
+
 export function AuthenticatedLayout() {
+  const { user }: any = useContext(AuthContext)
   return (
     <Layout>
-      <Header>
-          <Outlet/>
-      </Header>
+      <MiniDrawer />
+      <div>
+        <Header name={user.nome} />
+        <Outlet />
+      </div>
     </Layout>
   );
 }

@@ -1,4 +1,4 @@
-import { MuiAppBarProps } from "../../materialUI";
+import { MuiAppBarProps } from "../../MaterialUI";
 
 export default interface AppBarProps extends MuiAppBarProps {
   open?: boolean;

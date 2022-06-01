@@ -12,7 +12,7 @@ import {
   Grid,
   LockOutlinedIcon,
   Typography,
-} from "../../materialUI";
+} from "../../MaterialUI";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { BoxGrid, BoxContainer } from './styles'
 import { AuthContext } from "../../context/auth"
@@ -44,7 +44,9 @@ export function SignIn() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    signIn(email, password)
+    if(email !== '' && password !== '') {
+      signIn(email, password)
+    }
   };
 
   return (

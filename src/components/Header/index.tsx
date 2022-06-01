@@ -1,24 +1,23 @@
-import {
-  MiniDrawer
-} from '../../components'
+import { Menu } from '../'
 
 import HeaderProps from './interface'
 import {
-  Container
-} from './styles'
-
-import { AuthContext } from "../../context/auth";
-import { useContext } from 'react';
+  Header,
+  Container,
+  UserMenu,
+  Img
+} from './style'
 
 export default function defaultHeader (props: HeaderProps) {
-  
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { user }: any = useContext(AuthContext);
   return (
+    <Header>
       <Container>
-        <MiniDrawer name={user.name}>
-          { props.children }
-        </MiniDrawer>
+        {/* <Img/> */}
       </Container>
+      <UserMenu>
+        <h1>{props.name}</h1>
+          <Menu/>
+      </UserMenu>
+    </Header>
   )
 }

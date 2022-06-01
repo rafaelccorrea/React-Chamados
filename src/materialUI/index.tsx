@@ -26,47 +26,58 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Logout from '@mui/icons-material/Logout'
 import Tooltip from '@mui/material/Tooltip'
 import Menu from '@mui/material/Menu'
+import PersonAddIcon from '@mui/icons-material/PersonAdd'
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd'
+import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize'
+import GroupIcon from '@mui/icons-material/Group'
+import ListIcon from '@mui/icons-material/List'
+
 import {
-    TextField,
-    Box,
-    IconButton,
-    Grid,
-    MenuItem
-  } from '@mui/material'
+  TextField,
+  Box,
+  IconButton,
+  Grid,
+  MenuItem
+} from '@mui/material'
 
 export {
-    Logout,
-    Menu,
-    MenuItem,
-    Tooltip,
-    Avatar,
-    Button,
-    CssBaseline,
-    TextField,
-    FormControlLabel,
-    Checkbox,
-    Link,
-    Paper,
-    Box,
-    Grid,
-    LockOutlinedIcon,
-    Typography,
-    Container,
-    ChevronLeftIcon,
-    ChevronRightIcon,
-    Divider,
-    IconButton,
-    InboxIcon,
-    List,
-    ListItemButton,
-    ListItem,
-    ListItemText,
-    MenuIcon,
-    MuiAppBar,
-    MailIcon,
-    MuiDrawer,
-    ListItemIcon,
-    Toolbar,
-    KeyboardArrowDownIcon
-};    export type { MuiAppBarProps };
+  PlaylistAddIcon,
+  ListIcon,
+  DashboardCustomizeIcon,
+  GroupIcon,
+  PersonAddIcon,
+  Logout,
+  Menu,
+  MenuItem,
+  Tooltip,
+  Avatar,
+  Button,
+  CssBaseline,
+  TextField,
+  FormControlLabel,
+  Checkbox,
+  Link,
+  Paper,
+  Box,
+  Grid,
+  LockOutlinedIcon,
+  Typography,
+  Container,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  Divider,
+  IconButton,
+  InboxIcon,
+  List,
+  ListItemButton,
+  ListItem,
+  ListItemText,
+  MenuIcon,
+  MuiAppBar,
+  MailIcon,
+  MuiDrawer,
+  ListItemIcon,
+  Toolbar,
+  KeyboardArrowDownIcon
+}; export type { MuiAppBarProps };
 
